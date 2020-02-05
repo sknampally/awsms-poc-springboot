@@ -14,16 +14,16 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t awsms-poc-springboot:latest .
-      - docker tag awsms-poc-springboot:latest awsms-poc-springboot:$IMAGE_TAG
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
-      - docker push awsms-poc-springboot:latest
-      - docker push awsms-poc-springboot:$IMAGE_TAG
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
-      - printf '[{"name":"awsms-poc-springboot","imageUri":"%s"}]' awsms-poc-springboot:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"awsms-poc-springboot","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json 
 artifacts:
     files: imagedefinitions.json
