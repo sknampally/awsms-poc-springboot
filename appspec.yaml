@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:region:160357565307:task-definition/test-awsms-poc:2"
+        LoadBalancerInfo:
+          ContainerName: "test-awsms-poc"
+          ContainerPort: 5030
+        PlatformVersion: "LATEST"
