@@ -20,5 +20,5 @@
     "networkMode": "awsvpc",
     "cpu": "256",
     "memory": "1024",
-    "family": "ecs-demo"
+    "family": "test-awsms-poc"
 }
