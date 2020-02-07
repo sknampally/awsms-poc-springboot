@@ -3,8 +3,21 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: <TaskDefinition>
+        TaskDefinition: "rn:aws:ecs:region:160357565307:task-definition/test-awsms-poc:2"
         LoadBalancerInfo:
           ContainerName: "test-awsms-poc"
           ContainerPort: 5030
+# Optional properties
         PlatformVersion: "LATEST"
+        NetworkConfiguration:
+            AwsvpcConfiguration:
+              Subnets: ["AWSMS-POC-public-A", "AWSMS-POC-public-B"]
+              SecurityGroups: ["sg-0dc268f0a643b1bce"]
+              AssignPublicIp: "ENABLED"
+
+Hooks:
+- BeforeInstall: "BeforeInstallHookFunctionName"
+- AfterInstall: "AfterInstallHookFunctionName"
+- AfterAllowTestTraffic: "AfterAllowTestTrafficHookFunctionName"
+- BeforeAllowTraffic: "BeforeAllowTrafficHookFunctionName"
+- AfterAllowTraffic: "AfterAllowTrafficHookFunctionName"
