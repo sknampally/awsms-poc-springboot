@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "test-awsms-poc",
-            "image": "awsms-poc-springboot",
+            "image": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot",
             "essential": true,
             "portMappings": [
                 {
