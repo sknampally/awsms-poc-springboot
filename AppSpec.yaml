@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "rn:aws:ecs:region:160357565307:task-definition/new-taskdef"
+        TaskDefinition: "rn:aws:ecs:us-west-2:160357565307:task-definition/new-taskdef:1"
         LoadBalancerInfo:
           ContainerName: "mynew-container"
           ContainerPort: 5030
