@@ -3,9 +3,9 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "rn:aws:ecs:region:160357565307:task-definition/test-awsms-poc:2"
+        TaskDefinition: "rn:aws:ecs:region:160357565307:task-definition/new-taskdef"
         LoadBalancerInfo:
-          ContainerName: "test-awsms-poc"
+          ContainerName: "mynew-container"
           ContainerPort: 5030
 # Optional properties
         PlatformVersion: "LATEST"
