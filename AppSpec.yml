@@ -6,18 +6,3 @@ Resources:
         TaskDefinition: "arn:aws:ecs:us-west-2:160357565307:task-definition/new-taskdef:2"
         LoadBalancerInfo:
           ContainerName: "test-awsms-poc"
-          ContainerPort: 5030
-# Optional properties
-        PlatformVersion: "LATEST"
-        NetworkConfiguration:
-            AwsvpcConfiguration:
-              Subnets: ["AWSMS-POC-public-A", "AWSMS-POC-public-B"]
-              SecurityGroups: ["sg-0dc268f0a643b1bce"]
-              AssignPublicIp: "ENABLED"
-
-Hooks:
-- BeforeInstall: "BeforeInstallHookFunctionName"
-- AfterInstall: "AfterInstallHookFunctionName"
-- AfterAllowTestTraffic: "AfterAllowTestTrafficHookFunctionName"
-- BeforeAllowTraffic: "BeforeAllowTrafficHookFunctionName"
-- AfterAllowTraffic: "AfterAllowTrafficHookFunctionName"
