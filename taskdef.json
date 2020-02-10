@@ -1,9 +1,9 @@
 {
   "taskDefinition": {
-    "family": "hello-world",
+    "family": "test-awsms-poc",
     "containerDefinitions": [
       {
-        "name": "hello-world",
+        "name": "test-awsms-poc",
         "image": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot:awsms-poc-springboot",
         "cpu": 100,
         "portMappings": [
