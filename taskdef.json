@@ -1,24 +1,22 @@
 {
-    "executionRoleArn": "arn:aws:iam::160357565307:role/ecsTaskExecutionRole",
+  "taskDefinition": {
+    "family": "hello-world",
     "containerDefinitions": [
-        {
-            "name": "test-awsms-poc",
-            "image": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot",
-            "essential": true,
-            "portMappings": [
-                {
-                    "hostPort": 5030,
-                    "protocol": "tcp",
-                    "containerPort": 5030
-                }
-            ]
-        }
-    ],
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
-    "networkMode": "awsvpc",
-    "cpu": "256",
-    "memory": "1024",
-    "family": "test-awsms-poc"
+      {
+        "name": "hello-world",
+        "image": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot:awsms-poc-springboot",
+        "cpu": 100,
+        "portMappings": [
+          {
+            "protocol": "tcp",
+            "containerPort": 5030,
+            "hostPort": 5030
+          }
+        ],
+        "memory":1024,
+        "essential": true
+      }
+    ]
+  }
 }
+
