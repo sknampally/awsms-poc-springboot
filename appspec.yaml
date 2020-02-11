@@ -5,6 +5,6 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:us-west-2:160357565307:task-definition/my-new-task:1"
         LoadBalancerInfo:
-          ContainerName: "awsms-poc-springboot"
-          ContainerPort: 80
+          ContainerName: "test-awsms-poc"
+          ContainerPort: 5030
           PlatformVersion: "LATEST"
