@@ -1,7 +1,7 @@
 {
   "executionRoleArn": "arn:aws:iam::160357565307:role/ecsTaskExecutionRole",
   "containerDefinitions": [{
-    "name": "sample-website",
+    "name": "wsms-poc-springboot",
     "image": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot",
     "essential": true,
     "portMappings": [{
