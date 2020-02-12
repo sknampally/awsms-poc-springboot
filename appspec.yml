@@ -3,8 +3,13 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-west-2:160357565307:task-definition/test-awsms-poc:5"
+        TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
           ContainerName: "test-awsms-poc"
           ContainerPort: 5030
           PlatformVersion: "LATEST"
+           NetworkConfiguration:
+            AwsvpcConfiguration:
+              Subnets: ["AWSMS-POC-Private-A", "AWSMS-POC-Private-B"]
+              SecurityGroups: ["sg-0dc268f0a643b1bce"]
+              AssignPublicIp: "DISABLED"
