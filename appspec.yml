@@ -12,7 +12,7 @@ Resources:
             AwsvpcConfiguration:
               Subnets: ["subnet-022e892622fe90c8e", "subnet-06a409c9a36a9848c"]
               SecurityGroups: ["sg-0dc268f0a643b1bce"]
-              
+              AssignPublicIp: "ENABLED"
 Hooks:
 - BeforeInstall: "BeforeInstallHookFunctionName"
 - AfterInstall: "AfterInstallHookFunctionName"
