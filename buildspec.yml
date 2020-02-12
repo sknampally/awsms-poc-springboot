@@ -23,7 +23,7 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"test-awsms-poc","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
       - cat imagedefinitions.json 
-      - cat appspec.yaml > appspec.yaml
+      - cat appspec.yaml > AppSpec.yaml
 artifacts:
     files: 
        - imagedefinitions.json
