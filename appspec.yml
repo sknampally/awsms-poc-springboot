@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: <TASK_DEFINITION>
+        TaskDefinition: "arn:aws:ecs:us-west-2:160357565307:task-definition/test-awsms-poc:10"
         LoadBalancerInfo:
           ContainerName: "test-awsms-poc"
           ContainerPort: 5030
