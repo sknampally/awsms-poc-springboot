@@ -10,7 +10,7 @@ Resources:
           PlatformVersion: "LATEST"
            NetworkConfiguration:
             AwsvpcConfiguration:
-              Subnets: ["subnet-022e892622fe90c8e", "subnet-06a409c9a36a9848c"]
+              Subnets: ["subnet-0243c2eef169cefd4", "subnet-00ffd514686eafe97"]
               SecurityGroups: ["sg-0dc268f0a643b1bce"]
               AssignPublicIp: "ENABLED"
 Hooks:
