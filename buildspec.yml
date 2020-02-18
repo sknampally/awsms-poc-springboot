@@ -12,8 +12,6 @@ phases:
       - apt-get update -y
       - apt-get upgrade -y
       - apt-get install systemd -y
-      - apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-      - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
       - apt-get install docker-ce docker-ce-cli containerd.io -y
       - systemctl start docker
   build:
