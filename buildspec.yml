@@ -9,6 +9,14 @@ phases:
       - REPOSITORY_URI=160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=awsms-poc-springboot
+      - apt-get update -y
+      - apt-get upgrade -y
+      - apt-get install systemd -y
+      - apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+      - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+      - apt-get install docker-ce docker-ce-cli containerd.io -y
+      - systemctl start docker
   build:
     commands:
       - echo Build started on `date`
