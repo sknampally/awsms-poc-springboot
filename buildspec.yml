@@ -12,10 +12,6 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - apt-get update -y
-      - apt-get install docker.io -y
-      - systemctl start docker
-      - docker --version
       - echo Building the Docker image...
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
