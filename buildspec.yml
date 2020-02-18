@@ -12,7 +12,7 @@ phases:
       - apt-get update -y
       - apt-get upgrade -y
       - apt-get install systemd -y
-      - apt-get install docker-ce docker-ce-cli containerd.io -y
+      - apt-get install docker-ce  -y
       - systemctl start docker
   build:
     commands:
