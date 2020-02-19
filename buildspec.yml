@@ -10,8 +10,8 @@ phases:
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=awsms-poc-springboot
       - apt-get update -y 
-      - apt-get install systemd -y 
-      - systemctl start docker
+      - apt-get upgrade -y 
+      - /etc/init.d/docker restart
   build:
     commands:
       - echo Build started on `date`
