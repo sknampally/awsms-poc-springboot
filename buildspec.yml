@@ -9,10 +9,9 @@ phases:
       - REPOSITORY_URI=160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=awsms-poc-springboot
-      - cat /etc/os-release
-      - which docker
-      - locate docker
-      - uname -a
+      - apt-get update -y 
+      - apt-get install systemd -y 
+      - systemctl start docker
   build:
     commands:
       - echo Build started on `date`
