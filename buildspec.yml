@@ -9,8 +9,6 @@ phases:
       - REPOSITORY_URI=160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=awsms-poc-springboot
-      - chmod a+x docker.sh
-      - ./docker.sh
   build:
     commands:
       - echo Build started on `date`
