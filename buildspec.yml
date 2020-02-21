@@ -10,8 +10,7 @@ phases:
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=awsms-poc-springboot
       - aws --version
-      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://0.0.0.0:2375 --storage-driver=overlay&
-      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+     
   build:
     commands:
       - echo Build started on `date`
@@ -22,7 +21,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - $(aws ecr get-login --region us-east-2)
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
