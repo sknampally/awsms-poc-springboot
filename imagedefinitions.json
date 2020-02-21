@@ -1,6 +1,6 @@
 [
     {
-        "name": "test-awsms-poc",
+        "name": "awsms-sb-poc",
         "imageUri": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot:awsms-poc-springboot"
     }
 ]
