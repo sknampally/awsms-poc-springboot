@@ -22,6 +22,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - $(aws ecr get-login --region us-east-2)
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
