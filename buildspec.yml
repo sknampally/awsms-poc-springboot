@@ -22,7 +22,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - eval $(aws ecr get-login --no-include-email | sed ‘s|https://||’)
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
