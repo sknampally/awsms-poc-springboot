@@ -5,7 +5,7 @@ Resources:
       Properties:
         TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
-          ContainerName: "awsms-sb-poc"
+          ContainerName: "test-awsms-poc"
           ContainerPort: 5030
           PlatformVersion: "LATEST"
            
