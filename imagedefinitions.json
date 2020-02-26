@@ -1,6 +1,6 @@
 [
     {
-        "name": "test-awsms-poc",
-        "imageUri": "160357565307.dkr.ecr.us-east-2.amazonaws.com/awsms-poc-springboot:build-0bf70b12-9618-4709-ad5d-c723f84b57c9"
+        "name": "awsms-ecs-service",
+        "imageUri": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot:build-88ab2d0a-e2e1-4b90-b619-131ab8aeb1cd"
     }
 ]
