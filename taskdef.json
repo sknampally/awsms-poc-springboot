@@ -1,8 +1,8 @@
 {
   "executionRoleArn": "arn:aws:iam::160357565307:role/ecsTaskExecutionRole",
   "containerDefinitions": [{
-    "name": "test-awsms-poc",
-    "image": "160357565307.dkr.ecr.us-east-2.amazonaws.com/awsms-poc-springboot:build-0bf70b12-9618-4709-ad5d-c723f84b57c9",
+    "name": "awsms-ecs-service",
+    "image": "160357565307.dkr.ecr.us-west-2.amazonaws.com/awsms-poc-springboot:build-88ab2d0a-e2e1-4b90-b619-131ab8aeb1cd",
     "essential": true,
     "portMappings": [{
       "hostPort": 5030,
@@ -16,5 +16,5 @@
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "1024",
-  "family": "test-awsms-poc"
+  "family": "awsms-ecs-service"
 }
